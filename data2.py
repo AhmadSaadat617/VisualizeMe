@@ -167,8 +167,8 @@ def main():
         elif plot_type == "Heat Map":
             plot_heat_map(data)
         else:
-            x_column = st.sidebar.selectbox("Select X-axis", data.select_dtypes(include=['number']).columns)
-            y_column = st.sidebar.selectbox("Select Y-axis", data.select_dtypes(include=['number']).columns)
+            x_column = st.sidebar.selectbox("Select X-axis", data.columns)
+            y_column = st.sidebar.selectbox("Select Y-axis", data.columns)
             
             if plot_type == "Line Plot":
                 plot_line_plot(data, x_column, y_column)
